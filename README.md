@@ -1,22 +1,10 @@
-# AUTODRIVE — Supabase connected build
+# AutoDrive Web
 
-This package is configured for the connected Supabase project.
+GitHub Pages-ready static web build extracted from the Android project.
 
-- Project URL: `https://wuhrxoezcuxykpubldqp.supabase.co`
-- Client key: Supabase publishable key (safe for browser client use)
-- Database: `public.profiles`, `public.docs`
-- Storage bucket: `photos` (private)
-- Realtime: `public.docs`
-- RLS: enabled on application tables
+- Entry: `index.html`
+- Logo: `logo.png`
+- Data mode on web: browser localStorage fallback
+- AndroidBridge/Firestore hooks remain inactive in GitHub Pages and are safely bypassed by the web fallback.
 
-## Run
-
-Open `autodrive-supabase.html` in a modern browser.
-
-Create the first Supabase Auth user. The first registered user becomes `owner`; later users become `contributor`.
-
-## Security
-
-Do not put a Supabase secret/service-role key in the HTML. Browser access uses the publishable key and is protected by Auth + RLS.
-
-The SQL in `schema.sql` is the hardened version applied to the connected project.
+Publish the repository root with GitHub Pages.
